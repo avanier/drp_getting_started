@@ -18,6 +18,12 @@ get started by walking you through the following:
 # drpcli expects you to configure some things with json,
 # since not everything is controllable with cli flags
 
+# Start by downloading `drpcli`
+# Yes, this is VERY insecure. This is only to be used on locally hosted instances.
+wget --no-check-certificate https://${endpoint_ip}:8092/files/drpcli.amd64.linux
+chmod +x drpcli.amd64.linux
+mv drpcli.amd64.linux ~/.local/bin/drpcli
+
 # Let's get a sense for the default user schema
 drpcli -E "https://${endpoint_ip}:8092" \
   -U 'rocketskates' \
